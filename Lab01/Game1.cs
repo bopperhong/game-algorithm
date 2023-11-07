@@ -62,16 +62,17 @@ public class Game1 : Game
             Exit();
 
         // TODO: Add your update logic here
+        float elapsedTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
         var kState = Keyboard.GetState();
 
         if (kState.IsKeyDown(Keys.W))
         {
-            leftPaddle.Y -= paddleSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            leftPaddle.Y -= paddleSpeed * elapsedTime;
         }
 
         if (kState.IsKeyDown(Keys.S))
         {
-            leftPaddle.Y += paddleSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            leftPaddle.Y += paddleSpeed * elapsedTime;
         }
 
         if (leftPaddle.Y > _graphics.PreferredBackBufferHeight - paddleTexture.Height)
@@ -85,12 +86,12 @@ public class Game1 : Game
 
         if (kState.IsKeyDown(Keys.Up))
         {
-            rightPaddle.Y -= paddleSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            rightPaddle.Y -= paddleSpeed * elapsedTime;
         }
 
         if (kState.IsKeyDown(Keys.Down))
         {
-            rightPaddle.Y += paddleSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            rightPaddle.Y += paddleSpeed * elapsedTime;
         }
 
         if (rightPaddle.Y > _graphics.PreferredBackBufferHeight - paddleTexture.Height)
