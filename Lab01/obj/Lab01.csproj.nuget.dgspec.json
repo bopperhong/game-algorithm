@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/hong/Desktop/game algo/Lab01_20231031a/Lab01/Lab01.csproj": {}
+  },
+  "projects": {
+    "/Users/hong/Desktop/game algo/Lab01_20231031a/Lab01/Lab01.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/hong/Desktop/game algo/Lab01_20231031a/Lab01/Lab01.csproj",
+        "projectName": "Lab01",
+        "projectPath": "/Users/hong/Desktop/game algo/Lab01_20231031a/Lab01/Lab01.csproj",
+        "packagesPath": "/Users/hong/.nuget/packages/",
+        "outputPath": "/Users/hong/Desktop/game algo/Lab01_20231031a/Lab01/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/hong/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MonoGame.Content.Builder.Task": {
+              "target": "Package",
+              "version": "[3.8.1.263, )"
+            },
+            "MonoGame.Framework.DesktopGL": {
+              "target": "Package",
+              "version": "[3.8.1.263, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
