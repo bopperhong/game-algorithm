@@ -26,3 +26,6 @@
 /Users/hong/Desktop/game algo/Lab01_20231031a/Lab01/bin/Debug/net6.0/Content/ball_red_small.xnb
 /Users/hong/Desktop/game algo/Lab01_20231031a/Lab01/bin/Debug/net6.0/Content/paddle_yellow.xnb
 /Users/hong/Desktop/game algo/Lab01_20231031a/Lab01/bin/Debug/net6.0/Content/background_green.xnb
+C:\Users\Pro\Desktop\mmls\Y3S1\Game Algorithm\game-algorithm\Lab01\obj\Debug\net6.0\Lab01.dll
+C:\Users\Pro\Desktop\mmls\Y3S1\Game Algorithm\game-algorithm\Lab01\obj\Debug\net6.0\refint\Lab01.dll
+C:\Users\Pro\Desktop\mmls\Y3S1\Game Algorithm\game-algorithm\Lab01\obj\Debug\net6.0\Lab01.pdb

@@ -1,33 +1,52 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Lab02William;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Xml.Linq;
 
 namespace Lab03
 {
     public class Game1 : Game
     {
-        private GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
+        public GraphicsDeviceManager Graphics;
+        public SpriteBatch SpriteBatch;
+
+        public float ElapsedSeconds;
 
         public Game1()
         {
-            _graphics = new GraphicsDeviceManager(this);
+            Graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+
+            // Set the game for GameObject
+            GameObject.SetGame(this);
         }
 
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
 
-            base.Initialize();
+            // base.Initialize();
+            LoadContent();
+
+            Ball ball = new Ball("ball");
+
+            foreach (var (_, obj) in GameObjectCollection.Objects)
+            {
+                obj.Initialize();
+            }
+
+            ball.Position.X = Graphics.PreferredBackBufferWidth / 2f;
+            ball.Position.Y = Graphics.PreferredBackBufferHeight / 2f;
         }
 
         protected override void LoadContent()
         {
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
+            SpriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            Content.Load<Texture2D>("ball_red_small");
         }
 
         protected override void Update(GameTime gameTime)
@@ -37,7 +56,13 @@ namespace Lab03
 
             // TODO: Add your update logic here
 
-            base.Update(gameTime);
+            // base.Update(gameTime);
+            ElapsedSeconds = (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            foreach (var (_, obj) in GameObjectCollection.Objects)
+            {
+                obj.Update();
+            }
         }
 
         protected override void Draw(GameTime gameTime)
@@ -46,7 +71,11 @@ namespace Lab03
 
             // TODO: Add your drawing code here
 
-            base.Draw(gameTime);
+            // base.Draw(gameTime);
+            foreach (var (_, obj) in GameObjectCollection.Objects)
+            {
+                obj.Draw();
+            }
         }
     }
 }
