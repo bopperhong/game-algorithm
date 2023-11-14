@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "w6W2oyI57Wt8fB5Kzt6PnQPdzM1lYwNmFIF6rYZbBSnYIk4Hn14/XVhD0rVyMf5m/O7+oUfYkfZSrH2J6Ug+DA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Pro\\Desktop\\mmls\\Y3S1\\Game Algorithm\\game-algorithm\\Lab03\\Lab03.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Pro\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\Pro\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+  ],
+  "logs": []
+}

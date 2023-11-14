@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/Pro/Desktop/mmls/Y3S1/Game Algorithm/game-algorithm/Lab03/Content/background_green.png</File>
+    <File>C:/Users/Pro/Desktop/mmls/Y3S1/Game Algorithm/game-algorithm/Lab03/Content/ball_red_small.png</File>
+    <File>C:/Users/Pro/Desktop/mmls/Y3S1/Game Algorithm/game-algorithm/Lab03/Content/paddle_yellow_left.png</File>
+    <File>C:/Users/Pro/Desktop/mmls/Y3S1/Game Algorithm/game-algorithm/Lab03/Content/paddle_yellow_right.png</File>
+    <File>C:/Users/Pro/Desktop/mmls/Y3S1/Game Algorithm/game-algorithm/Lab03/Content/Score.spritefont</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
