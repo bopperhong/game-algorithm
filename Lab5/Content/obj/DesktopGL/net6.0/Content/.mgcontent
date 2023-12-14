@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/Pro/Desktop/mmls/Y3S1/Game Algorithm/game-algorithm/Lab5/Content/crosshair179.png</File>
+    <File>C:/Users/Pro/Desktop/mmls/Y3S1/Game Algorithm/game-algorithm/Lab5/Content/purple.png</File>
+    <File>C:/Users/Pro/Desktop/mmls/Y3S1/Game Algorithm/game-algorithm/Lab5/Content/spaceMeteors_002_small.png</File>
+    <File>C:/Users/Pro/Desktop/mmls/Y3S1/Game Algorithm/game-algorithm/Lab5/Content/spaceShips_009_right.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
