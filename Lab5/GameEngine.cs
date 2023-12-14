@@ -37,10 +37,15 @@ namespace GameAlgoT2310
         {
             LoadContent();
 
-            // Construct game objects here.           
+            // Construct game objects here.
+            //int randY = Random.Next(-50, 450);
+            //int randX = Random.Next(-50, 850);
+            //Vector2 newPosition = new Vector2(randX, randY);
+            Vector2 newPosition = new Vector2(Graphics.PreferredBackBufferWidth, Graphics.PreferredBackBufferHeight);
             Background background = new Background("background");
             Spaceship spaceship = new Spaceship("spaceship");
-            Missile missle = new Missile("missile", spaceship);
+            Missile missile = new Missile("missile", spaceship);
+            Asteroid asteroid = new Asteroid("asteroid", newPosition);
 
             // Initialize all game objects
             GameObjectCollection.Initialize();
@@ -52,6 +57,10 @@ namespace GameAlgoT2310
 
             // Pre-load all assets here (e.g. textures, sprite font, etc.)
             // e.g. Content.Load<Texture2D>("texture-name")
+            Content.Load<Texture2D>("spaceShips_009_right");
+            Content.Load<Texture2D>("crosshair179");
+            Content.Load<Texture2D>("purple");
+            Content.Load<Texture2D>("spaceMeteors_002_small");
 
         }
 
