@@ -27,3 +27,6 @@ C:\Users\Pro\Desktop\mmls\Y3S1\Game Algorithm\game-algorithm\Lab5\obj\Debug\net6
 C:\Users\Pro\Desktop\mmls\Y3S1\Game Algorithm\game-algorithm\Lab5\obj\Debug\net6.0\Lab5.pdb
 C:\Users\Pro\Desktop\mmls\Y3S1\Game Algorithm\game-algorithm\Lab5\obj\Debug\net6.0\Lab5.genruntimeconfig.cache
 C:\Users\Pro\Desktop\mmls\Y3S1\Game Algorithm\game-algorithm\Lab5\obj\Debug\net6.0\ref\Lab5.dll
+C:\Users\Pro\Desktop\mmls\Y3S1\Game Algorithm\game-algorithm\Lab5\bin\Debug\net6.0\Content\enemyExplosion.xnb
+C:\Users\Pro\Desktop\mmls\Y3S1\Game Algorithm\game-algorithm\Lab5\bin\Debug\net6.0\Content\laserShooting.xnb
+C:\Users\Pro\Desktop\mmls\Y3S1\Game Algorithm\game-algorithm\Lab5\bin\Debug\net6.0\Content\spaceMissiles_015_right.xnb

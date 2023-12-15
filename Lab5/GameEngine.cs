@@ -1,5 +1,6 @@
 ﻿using Lab05;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -38,10 +39,33 @@ namespace GameAlgoT2310
             LoadContent();
 
             // Construct game objects here.
-            //int randY = Random.Next(-50, 450);
-            //int randX = Random.Next(-50, 850);
-            //Vector2 newPosition = new Vector2(randX, randY);
-            Vector2 newPosition = new Vector2(Graphics.PreferredBackBufferWidth, Graphics.PreferredBackBufferHeight);
+            System.Diagnostics.Debug.WriteLine(Graphics.PreferredBackBufferWidth );
+            int randY = 0, randX = 0;
+            int spawnMargin = 100; // Adjust this margin as needed
+            if (Random.Next(2) == 0) // Randomly choose either left/right or top/bottom
+            {
+                if (Random.Next(2) == 0)
+                {
+                    randX = -spawnMargin; // Spawn to the left
+                }
+                else
+                {
+                    randX = Graphics.PreferredBackBufferWidth + spawnMargin; // Spawn to the right
+                }
+            }
+            else
+            {
+                if (Random.Next(2) == 1)
+                {
+                    randY = -spawnMargin; // Spawn at the top
+                }
+                else
+                {
+                    randY = Graphics.PreferredBackBufferHeight + spawnMargin; // Spawn at the bottom
+                }
+            }
+            Vector2 newPosition = new Vector2(randX, randY);
+            //Vector2 newPosition = new Vector2(Graphics.PreferredBackBufferWidth, Graphics.PreferredBackBufferHeight);
             Background background = new Background("background");
             Spaceship spaceship = new Spaceship("spaceship");
             Missile missile = new Missile("missile", spaceship);

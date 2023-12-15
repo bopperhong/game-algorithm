@@ -15,7 +15,7 @@ namespace Lab05
         public Vector2 asteroidPosition;
         public Vector2 asteroidAngle;
         float flyingSpeed;
-        double angle;
+        
         public float asteroidRotation;
         public List<Asteroid> asteroids;
         public Vector2 direction;

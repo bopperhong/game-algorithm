@@ -14,7 +14,7 @@ namespace Lab05
         public Vector2 spaceShipPosition;
         public Vector2 spaceShipAngle;
         float flyingSpeed;
-        double angle;
+        public float angle;
 
         public Spaceship(string name) : base(name)
         {
@@ -69,7 +69,7 @@ namespace Lab05
 
             var mouseState = Mouse.GetState();
 
-            angle = Math.Atan2(mouseState.Y - spaceShipPosition.Y, mouseState.X - spaceShipPosition.X);
+            angle = (float)Math.Atan2(mouseState.Y - spaceShipPosition.Y, mouseState.X - spaceShipPosition.X);
             spaceShipAngle.X = (float)Math.Cos(angle);
             spaceShipAngle.Y = (float)Math.Sin(angle);
         }

@@ -5,11 +5,17 @@
   <Config />
   <SourceFiles>
     <File>C:/Users/Pro/Desktop/mmls/Y3S1/Game Algorithm/game-algorithm/Lab5/Content/crosshair179.png</File>
+    <File>C:/Users/Pro/Desktop/mmls/Y3S1/Game Algorithm/game-algorithm/Lab5/Content/enemyExplosion.wav</File>
+    <File>C:/Users/Pro/Desktop/mmls/Y3S1/Game Algorithm/game-algorithm/Lab5/Content/laserShooting.wav</File>
     <File>C:/Users/Pro/Desktop/mmls/Y3S1/Game Algorithm/game-algorithm/Lab5/Content/purple.png</File>
     <File>C:/Users/Pro/Desktop/mmls/Y3S1/Game Algorithm/game-algorithm/Lab5/Content/spaceMeteors_002_small.png</File>
+    <File>C:/Users/Pro/Desktop/mmls/Y3S1/Game Algorithm/game-algorithm/Lab5/Content/spaceMissiles_015_right.png</File>
     <File>C:/Users/Pro/Desktop/mmls/Y3S1/Game Algorithm/game-algorithm/Lab5/Content/spaceShips_009_right.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

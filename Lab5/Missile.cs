@@ -9,10 +9,11 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Security.Cryptography.X509Certificates;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.Xna.Framework.Audio;
 
 namespace Lab05
 {
-	public class Missile : GameObject
+	public class Missile : GameObject, ICollidable
 	{
 
 		public Texture2D missile_texture;
@@ -33,8 +34,11 @@ namespace Lab05
         public float gap = -30f;
         public double burstCooldown;
         public double burstTimer;
+        public SoundEffect missile_effect;
+        private Rectangle _bound;
+        
 
-		public Missile(string name, Spaceship spaceship) : base(name)
+        public Missile(string name, Spaceship spaceship) : base(name)
 		{
             this.spaceship = spaceship;
             missiles = new List<MissileInstance>();
@@ -47,7 +51,32 @@ namespace Lab05
             cooldownTimer = 0;
             burstTimer = -1;
             burstCooldown = 0;
+            //missile_effect = _game.Content.Load<SoundEffect>("laserShooting");
 
+            _bound.Width = missile_texture.Width;
+            _bound.Height = missile_texture.Height;
+            _bound.Location = Position.ToPoint();
+            _game.CollisionEngine.Listen(typeof(Background), typeof(Missile), CollisionEngine.NotAABB);
+
+        }
+
+        public string GetGroupName()
+        {
+            return this.GetType().Name;
+        }
+
+        public Rectangle GetBound()
+        {
+            _bound.Location = (Position - Origin).ToPoint();
+            return _bound;
+        }
+
+        public void OnCollision(CollisionInfo collisionInfo)
+        {
+            if (collisionInfo.Other is Background)
+            {
+                GameObjectCollection.DeInstantiate(this);
+            }
         }
 
 		public override void Draw()
@@ -174,6 +203,7 @@ namespace Lab05
             public Vector2 position;
             public Vector2 missileAngle;
             public float speed;
+            public float verticalOffset;
 
             public MissileInstance(Vector2 startPosition, float gap)
             {
@@ -186,17 +216,23 @@ namespace Lab05
                 missileAngle = new Vector2((float)Math.Cos(angle), (float)Math.Sin(angle));
                 // Apply the delay to the missile
                 position += missileAngle * speed * ScalableGameTime.DeltaTime;
+
             }
 
             public void Update()
             {
-                position += missileAngle * speed * ScalableGameTime.DeltaTime;
+                //position += missileAngle * speed * ScalableGameTime.DeltaTime;
+                verticalOffset += 5f * ScalableGameTime.DeltaTime;
+                float sineWave = (float)Math.Sin(verticalOffset);
+                position += new Vector2(missileAngle.X , missileAngle.Y + sineWave) * 5f;
+                //position += missileAngle * sineWave * 5f;
             }
         }
 
         public class MissileInstanceHorizontalBurst : MissileInstance
         {
             public float missile_gap;
+            
             public MissileInstanceHorizontalBurst(Vector2 startPosition, float gap) : base(startPosition, gap)
             {
                 float speed = 500f;
@@ -210,18 +246,13 @@ namespace Lab05
 
                 float deltaX = missile_gap * (float)Math.Asinh(missileAngle.Y);
                 float deltaY = missile_gap * (float)Math.Asinh(missileAngle.X);
-                position += missileAngle * speed * ScalableGameTime.DeltaTime;
-
-                position.X = startPosition.X + deltaX;
-                position.Y = startPosition.Y + deltaY;
+                position.X = startPosition.X + deltaX ;
+                position.Y = startPosition.Y + deltaY ;
+                //position += missileAngle * speed * ScalableGameTime.DeltaTime;
 
             }
 
-            public new void Update()
-            {
-                base.Update();
-                
-            }
+
         }
     }
 }
